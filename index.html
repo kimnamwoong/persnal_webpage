@@ -5,59 +5,151 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nam Woong's Personal Webpage</title>
+    <title>Nam Yung's Web</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <!-- 사용자의 운영체제에 해당 폰트가 없을 경우  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <!-- font awesome icon 적용을 위한 cdn 링크 적용 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <table cellspacing="10">
-        <tr>
-            <td><img src="my_img.png" alt="nam woong image"></td>
-            <td>
-                <h1>Nam Woong Kim</h1>
-                <p>저는 개발자를 꿈꾸고 있는<string>취준생입니다</strong>.</p>
-                <p>
-                    저는 <a target="_blank" href="https://www.jnu.ac.kr/jnumain.aspx">전남대학교</a> 토목공학과를 졸업하고 코딩에 관심이 있어
-                    프로그래밍 관련 국비지원 교육 과정을 수료하고 꾸준히 공부중입니다.
+    <div class="container">
+        <nav class="nav-bar">
+            <div class="nav_logo">
+                <i class="fa-brands fa-chromecast"></i>
+                <a href="">My home</a>
+            </div>
+        
+            <ul class="nav_menu">
+                <li><a href="">Home</a></li>
+                <li><a href="">Details</a></li>
+                <li><a id="about-link" href="" onclick="aboutLinkClicked();return false;">About me</li>
+                <li><a href="" onclick="contactLinkClicked();return false;">Contact Me</a></li>
+            </ul>
+        
+            <ul class="nav_icons">
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://github.com/kimnamwoong">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </ul>
+            <a href="#" class="nav_button">
+                <i class="fas fa-bars"></i>
+            </a>
+        </nav>
+        <h1>Welcome!!</h1>
+        <div class="text_box" data-trigger>
+            <span class="text"></span>
+        </div>
+        <button class="about-button">About</button>
+        <img class="background" src="images/main_background.png" alt="background-img">
+    </div>
+    
+    <div class="middle-container">
+        <div class="profile">
+            <hr>
+            <img src="images/my_img.png" alt="profile-img">
+            <div class="intro">
+                <h2>Introduce</h2>
+                <p class="intro">
+                    안녕하세요 저는 개발자를 꿈꾸며 노력하고 있는 김남웅이라고 합니다. 잘 부탁드립니다!!
                 </p>
-            </td>
-        </tr>
-    </table>
+            </div>
+        </div>
+        <hr>
+        <div class="education-box">
+            <h2>School & Education</h2>
+            <img class="computer" src="images/computer.png" alt="computer-img">
+            <ul>
+                <li class="education">전남대학교 토목공학과(2012 ~ 2018)</li>
+                <li class="education">광주인력개발원 AI 통합 플랫폼 개발자 양성과정(2020.09 ~ 2021.04)</li>
+            </ul>
+        </div>
+        <hr>
+        <div class="skills">
+            <h2>My Skills</h2>
+            <div class="skill-row">
+                <img class="language-img" src="images/html_img.png" alt="html-img">
+                <img class="language-img" src="images/css_img.png" alt="css-img">
+                <img class="language-img" src="images/JV_img.png" alt="jv-img">
+                <img class="language-img" src="images/python_img.png" alt="python-img">
+                <img class="language-img" src="images/c++_img.jpg" alt="cpp-img">
+            </div>
+        </div>
+        <hr>
+        <h2>Projects</h2>
+        <div class="project-box">
+            <div class="project">
+                <h3>STT&TTS</h3>
+                <p>python을 이용한 Speech to text & Text to speech project</p>
+                <a href="https://github.com/kimnamwoong/STT_TTS">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+            <div class="project">
+                <h3>Face Recognition</h3>
+                <p>Python을 이용한 얼굴 인식 project</p>
+                <a href="https://github.com/kimnamwoong/Face_recognition">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+            <div class="project">
+                <h3>DIET</h3>
+                <p>C++ Qt creator를 이용한 삼성헬스어플 모티브 project</p>
+                <a href="https://github.com/kimnamwoong/Diet">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+            <div class="project">
+                <h3>Clone Chrome</h3>
+                <p>HTML CSS javascript 이용한 크롬 클론 코딩 project</p>
+                <a href="https://github.com/kimnamwoong/Chrome-Clone">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+            <div class="project">
+                <h3>Company</h3>
+                <p>C언어 TCP/IP 통신 project</p>
+                <a href="https://github.com/kimnamwoong/-TCP-IP-">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+            <div class="project">
+                <h3>More Project</h3>
+                <p><a class="file-link" href="">Download</a></p>
+            </div>
+        </div>
+        <hr>
+        <div class="contact-me">
+            <h2>Get In Touch</h2>
+            <h3>"끊임없이 노력하라 체력이나 지능이 아니라 노력이야 말로 잠재력의 자물쇠를 푸는 열쇠다" - 윈스턴처칠</h3>
+            <p>성실함과 꾸준함으로 끊임없이 발전하는 개발자가 되겠습니다.</p>
+            <a class="btn" href="mailto:name@email.com">CONTACT ME</a>
+        </div>
+    </div>
 
-    <hr>
-    <h3>Education</h3>
-    <ul>
-        <li>서강고등학교</li>
-        <li>전남대학교</li>
-        <li>교육 수강 목록</li>
-        <ul>
-            <li>광주인력개발원 AI 통합 플랫폼 개발자 양성과정</li>
-            <li>python bootcamp for 100days</li>
-        </ul>
-    </ul>
-    <hr>
-    <h3>Skills</h3>
-    <table cellspacing="10">
-        <tr>
-            <td>python</td>
-            <td>★★★</td>
-        </tr>
-        <tr>
-            <td>C++</td>
-            <td>★★</td>
-        </tr>
-        <tr>
-            <td>HTML</td>
-            <td>★★</td>
-        </tr>
-        <tr>
-            <td>CSS</td>
-            <td>★★</td>
-        </tr>
-    </table>
-    <hr>
-    <h3><a target="_blank" href="hobbies.html">Hobbies</a></h3>
-    <h3><a target="_blank" href="contact.html">Contact me</a></h3>
+    <footer class="bottom-container">
+        <a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a>
+        <a class="footer-link" href="https://www.instagram.com/woong_7777/">Instagram
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a class="footer-link" href="https://github.com/kimnamwoong">Github
+            <i class="fa-brands fa-github"></i>
+        </a>
+        <p class="authorized">© 2022 made by Nam Yung Kim.</p>
+    </footer>
 
+
+    <!-- javascript 연결 -->
+    <script src="js/menu_bar.js" defer></script>
+    <script src="js/tying.js" defer></script>
+    <script src="js/scroll.js" defer></script>
 </body>
 
 </html>
